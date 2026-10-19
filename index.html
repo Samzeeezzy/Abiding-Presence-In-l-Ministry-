@@ -1,49 +1,311 @@
 
-<section class="give-section section" id="give">
-  <p class="eyebrow">PARTNER WITH THE MINISTRY</p>
-  <h2>Give with a <em>grateful heart</em></h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to Abiding Presence International Ministry — a place of worship, prayer, spiritual growth, and community.">
+  <meta name="theme-color" content="#123b2d">
+  <title>Abiding Presence International Ministry</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
 
-  <p class="section-intro">
-    Your generosity helps us share the Gospel, strengthen our ministry,
-    support outreach, and serve our community. Thank you for partnering
-    with Abiding Presence International Ministry.
-  </p>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Abiding Presence International Ministry home">
+        <span class="brand-mark">AP</span>
+        <span class="brand-text">
+          <strong>ABIDING PRESENCE</strong>
+          <small>INTERNATIONAL MINISTRY</small>
+        </span>
+      </a>
 
-  <div class="give-card">
-    <div class="give-symbol">♡</div>
-    <h3>Give by Bank Transfer</h3>
-    <p>
-      You can support the ministry through a bank transfer using the
-      official account details below.
-    </p>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="navigation"
+        aria-expanded="false">
+        ☰
+      </button>
 
-    <div class="bank-details">
-      <div>
-        <span>Account Name</span>
-        <strong>To be provided</strong>
-      </div>
-      <div>
-        <span>Bank Name</span>
-        <strong>To be provided</strong>
-      </div>
-      <div>
-        <span>Account Number</span>
-        <strong>To be provided</strong>
-      </div>
+      <nav id="navigation" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#ministries">Ministries</a>
+        <a href="#events">Events</a>
+        <a href="#prayer">Prayer</a>
+        <a href="#give">Give</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <p class="give-note">
-      Official bank details will be published here after confirmation
-      by the ministry. Please contact the church for verified payment
-      information before making a transfer.
-    </p>
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow hero-eyebrow">WELCOME TO ABIDING PRESENCE</p>
+        <h1>Abiding in His Presence.<br>Living in His <em>Purpose.</em></h1>
+        <p class="hero-description">
+          A place to encounter God's presence, grow in His Word,
+          experience the power of prayer, and live out your purpose in Christ.
+        </p>
 
-    <a class="button button-gold" href="#contact">
-      Contact the Ministry
-    </a>
-  </div>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#about">Discover Our Ministry</a>
+          <a class="button button-outline" href="#contact">Plan Your Visit</a>
+        </div>
 
-  <p class="scripture-reference">
-    “God loves a cheerful giver.” — 2 Corinthians 9:7
-  </p>
-</section>
+        <p class="hero-verse">
+          “Abide in me, and I in you.” <span>— John 15:4</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Welcome / About -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHO WE ARE</p>
+          <h2>A Family Growing in <em>God's Presence</em></h2>
+          <p class="section-intro">
+            Abiding Presence International Ministry is committed to helping
+            people know God, grow in faith, and make a meaningful difference
+            in their homes and communities.
+          </p>
+        </div>
+
+        <div class="three-cards">
+          <article class="info-card">
+            <span class="card-number">01</span>
+            <h3>Our Vision</h3>
+            <p>
+              To see lives transformed by the presence of God and believers
+              equipped to fulfil their God-given purpose.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <span class="card-number">02</span>
+            <h3>Our Mission</h3>
+            <p>
+              To share the Gospel of Jesus Christ, teach God's Word, cultivate
+              a life of prayer, and serve people with love.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <span class="card-number">03</span>
+            <h3>Our Community</h3>
+            <p>
+              A welcoming spiritual family where people can worship, build
+              meaningful relationships, and grow together in faith.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripture -->
+    <section class="scripture-band">
+      <div class="container scripture-content">
+        <p class="eyebrow">BE STILL AND KNOW</p>
+        <blockquote>
+          “Be still, and know that I am God.”
+        </blockquote>
+        <p class="scripture-reference">PSALM 46:10</p>
+      </div>
+    </section>
+
+    <!-- Ministries -->
+    <section class="section ministries-section" id="ministries">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">GROW WITH US</p>
+          <h2>Our <em>Ministries</em></h2>
+          <p class="section-intro">
+            Discover opportunities to worship, pray, learn God's Word,
+            and become part of a growing community of faith.
+          </p>
+        </div>
+
+        <div class="three-cards">
+          <article class="ministry-card">
+            <div class="ministry-icon" aria-hidden="true">♫</div>
+            <p class="eyebrow">WORSHIP</p>
+            <h3>Worship & Praise</h3>
+            <p>
+              Gathering in heartfelt worship and praise to honour God
+              and celebrate His goodness.
+            </p>
+          </article>
+
+          <article class="ministry-card">
+            <div class="ministry-icon" aria-hidden="true">✧</div>
+            <p class="eyebrow">PRAYER</p>
+            <h3>Prayer & Intercession</h3>
+            <p>
+              Building a deeper relationship with God through prayer,
+              intercession, and dependence on the Holy Spirit.
+            </p>
+          </article>
+
+          <article class="ministry-card">
+            <div class="ministry-icon" aria-hidden="true">✝</div>
+            <p class="eyebrow">THE WORD</p>
+            <h3>Word & Discipleship</h3>
+            <p>
+              Growing in biblical understanding and learning to apply
+              God's Word to everyday life.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section class="section events-section" id="events">
+      <div class="container events-layout">
+        <div class="events-copy">
+          <p class="eyebrow">STAY CONNECTED</p>
+          <h2>Gather, Grow & <em>Worship</em></h2>
+          <p>
+            We look forward to worshipping and growing in faith together.
+            Details of upcoming services, prayer meetings, and special
+            programmes will be shared here.
+          </p>
+          <a class="button button-dark" href="#contact">Ask About Our Services</a>
+        </div>
+
+        <div class="event-placeholder">
+          <span class="event-symbol" aria-hidden="true">✦</span>
+          <h3>Upcoming Programmes</h3>
+          <p>
+            Programme dates and service schedules will be announced soon.
+            Please contact the ministry for the latest information.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prayer -->
+    <section class="prayer-section" id="prayer">
+      <div class="container prayer-content">
+        <p class="eyebrow">WE BELIEVE IN THE POWER OF PRAYER</p>
+        <h2>How Can We <em>Pray for You?</em></h2>
+        <p>
+          Whatever you are going through, you do not have to walk alone.
+          We welcome you to reach out and share your prayer request.
+        </p>
+        <a class="button button-gold" href="#contact">Share a Prayer Request</a>
+      </div>
+    </section>
+
+    <!-- Give / Donation -->
+    <section class="section give-section" id="give">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">PARTNER WITH THE MINISTRY</p>
+          <h2>Give with a <em>Grateful Heart</em></h2>
+          <p class="section-intro">
+            Your generosity can help support the work of the ministry,
+            Gospel outreach, discipleship, and service to our community.
+            Thank you for considering partnering with us.
+          </p>
+        </div>
+
+        <div class="give-card">
+          <div class="give-symbol" aria-hidden="true">♡</div>
+          <p class="eyebrow">SUPPORT THE WORK</p>
+          <h3>Give by Bank Transfer</h3>
+          <p class="give-intro">
+            Use the official ministry bank account details below when they
+            have been confirmed and published.
+          </p>
+
+          <div class="bank-details">
+            <div class="bank-row">
+              <span>Account Name</span>
+              <strong>To be provided</strong>
+            </div>
+            <div class="bank-row">
+              <span>Bank Name</span>
+              <strong>To be provided</strong>
+            </div>
+            <div class="bank-row">
+              <span>Account Number</span>
+              <strong>To be provided</strong>
+            </div>
+          </div>
+
+          <p class="give-note">
+            Official bank details will be added after confirmation by the
+            ministry. Please contact the ministry for verified payment
+            information before making a transfer.
+          </p>
+
+          <a class="button button-gold" href="#contact">
+            Contact the Ministry
+          </a>
+        </div>
+
+        <p class="give-scripture">
+          “For God loves a cheerful giver.” — 2 Corinthians 9:7
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</p>
+          <h2>Connect with <em>Us</em></h2>
+          <p class="section-intro">
+            Whether you want to visit, ask a question, or share a prayer
+            request, you are welcome to get in touch.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <article class="contact-card">
+            <span class="contact-icon" aria-hidden="true">⌖</span>
+            <h3>Visit Us</h3>
+            <p>Church address to be added.</p>
+          </article>
+
+          <article class="contact-card">
+            <span class="contact-icon" aria-hidden="true">✉</span>
+            <h3>Email Us</h3>
+            <p>Email address to be added.</p>
+          </article>
+
+          <article class="contact-card">
+            <span class="contact-icon" aria-hidden="true">◷</span>
+            <h3>Service Times</h3>
+            <p>Service schedule to be announced.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#home" class="footer-brand">ABIDING PRESENCE</a>
+      <p>Abiding in His Presence. Living in His Purpose.</p>
+      <p class="copyright">
+        &copy; <span id="year"></span> Abiding Presence International Ministry.
+        All rights reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
