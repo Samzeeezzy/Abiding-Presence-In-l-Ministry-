@@ -1,69 +1,604 @@
 
+/* =========================================
+   ABIDING PRESENCE INTERNATIONAL MINISTRY
+   Main stylesheet
+========================================= */
+
+:root {
+  --green: #123b2d;
+  --green-dark: #0b291f;
+  --green-light: #1d5943;
+  --gold: #c5a15a;
+  --gold-light: #e3c987;
+  --cream: #f7f5ef;
+  --cream-dark: #eee9dd;
+  --white: #ffffff;
+  --ink: #222720;
+  --muted: #6d756e;
+  --border: #e5e0d4;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: Arial, Helvetica, sans-serif;
+  --container: 1160px;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--white);
+  font-family: var(--sans);
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(var(--container), calc(100% - 44px));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 92px 0;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: #98762f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: break-word;
+}
+
+h2 {
+  margin: 0;
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: clamp(32px, 4vw, 47px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h2 em,
+.hero h1 em {
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.section-intro {
+  max-width: 660px;
+  margin: 18px auto 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* Header and navigation */
+.site-header {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  background: var(--white);
+  border-bottom: 1px solid rgba(18, 59, 45, 0.08);
+}
+
+.header-inner {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 18px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.brand-text strong {
+  color: var(--green);
+  font-size: 13px;
+  letter-spacing: 1.4px;
+}
+
+.brand-text small {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+#navigation {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+#navigation a {
+  padding: 8px 0;
+  color: #3f4942;
+  font-size: 12px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+#navigation a:hover,
+#navigation a:focus-visible {
+  color: #a77e30;
+}
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--green);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Buttons */
+.button {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 23px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-gold {
+  background: var(--gold);
+  color: var(--green-dark);
+}
+
+.button-gold:hover {
+  background: var(--gold-light);
+}
+
+.button-outline {
+  border-color: rgba(255, 255, 255, 0.65);
+  background: transparent;
+  color: var(--white);
+}
+
+.button-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold-light);
+}
+
+.button-dark {
+  background: var(--green);
+  color: var(--white);
+}
+
+.button-dark:hover {
+  background: var(--green-light);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 610px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 75% 25%,
+      rgba(197, 161, 90, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(120deg, #0b291f 0%, #123b2d 60%, #1c4935 100%);
+  color: var(--white);
+}
+
+.hero::before {
+  position: absolute;
+  top: 0;
+  right: -10%;
+  width: 58%;
+  height: 100%;
+  border-left: 1px solid rgba(227, 201, 135, 0.12);
+  content: "";
+  transform: skewX(-15deg);
+}
+
+.hero::after {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  width: 320px;
+  height: 320px;
+  border: 1px solid rgba(227, 201, 135, 0.18);
+  border-radius: 50%;
+  content: "";
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 30, 22, 0.4),
+    transparent 90%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.hero-eyebrow {
+  color: var(--gold-light);
+}
+
+.hero h1 {
+  max-width: 800px;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(43px, 6.5vw, 76px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.hero-description {
+  max-width: 610px;
+  margin: 24px 0 28px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.hero-verse {
+  margin: 35px 0 0;
+  color: var(--gold-light);
+  font-family: var(--serif);
+  font-size: 17px;
+  font-style: italic;
+}
+
+.hero-verse span {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-style: normal;
+}
+
+/* About */
+.about-section {
+  background: var(--cream);
+}
+
+.three-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.info-card {
+  min-height: 225px;
+  padding: 30px;
+  background: var(--white);
+  border: 1px solid var(--border);
+}
+
+.card-number {
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 28px;
+}
+
+.info-card h3,
+.ministry-card h3,
+.contact-card h3 {
+  margin: 15px 0 10px;
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.info-card p,
+.ministry-card p,
+.contact-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Scripture band */
+.scripture-band {
+  padding: 70px 0;
+  background: var(--green);
+  color: var(--white);
+  text-align: center;
+}
+
+.scripture-content .eyebrow {
+  color: var(--gold-light);
+}
+
+.scripture-band blockquote {
+  max-width: 850px;
+  margin: 15px auto;
+  font-family: var(--serif);
+  font-size: clamp(27px, 4vw, 42px);
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.scripture-reference {
+  color: var(--gold-light);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+/* Ministries */
+.ministries-section {
+  background: var(--white);
+}
+
+.ministry-card {
+  padding: 32px 28px;
+  border: 1px solid var(--border);
+  border-bottom: 3px solid var(--gold);
+  background: var(--white);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ministry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(18, 59, 45, 0.08);
+}
+
+.ministry-icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 23px;
+  border-radius: 50%;
+  background: var(--cream);
+  color: #a77e30;
+  font-size: 27px;
+}
+
+.ministry-card .eyebrow {
+  margin-bottom: 8px;
+}
+
+/* Events */
+.events-section {
+  background: var(--cream);
+}
+
+.events-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.events-copy > p:not(.eyebrow) {
+  margin: 22px 0 25px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.event-placeholder {
+  padding: 42px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  text-align: center;
+}
+
+.event-symbol {
+  color: var(--gold);
+  font-size: 36px;
+}
+
+.event-placeholder h3 {
+  margin: 12px 0;
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.event-placeholder p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Prayer section */
+.prayer-section {
+  padding: 85px 0;
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(197, 161, 90, 0.12),
+      transparent 35%
+    ),
+    var(--green-dark);
+  color: var(--white);
+  text-align: center;
+}
+
+.prayer-content {
+  max-width: 800px;
+}
+
+.prayer-section .eyebrow {
+  color: var(--gold-light);
+}
+
+.prayer-section h2 {
+  color: var(--white);
+}
+
+.prayer-section > .container > p:not(.eyebrow) {
+  max-width: 650px;
+  margin: 20px auto 28px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+}
+
 /* Give and donation section */
 .give-section {
-  text-align: center;
   background: #f0ede4;
 }
 
 .give-card {
-  max-width: 620px;
-  margin: 35px auto 25px;
-  padding: 38px;
-  background: #ffffff;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 40px;
   border: 1px solid #e4ddcd;
   border-top: 4px solid var(--gold);
+  background: var(--white);
   box-shadow: 0 12px 35px rgba(18, 59, 45, 0.06);
+  text-align: center;
 }
 
 .give-symbol {
+  width: 60px;
+  height: 60px;
   display: grid;
   place-items: center;
-  width: 58px;
-  height: 58px;
   margin: 0 auto 18px;
   border-radius: 50%;
   background: #f4efdf;
   color: #a77e30;
-  font-size: 30px;
+  font-size: 32px;
 }
 
 .give-card h3 {
-  margin-bottom: 12px;
+  margin: 0 0 12px;
   color: var(--green);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 27px;
+  font-family: var(--serif);
+  font-size: 29px;
   font-weight: 400;
 }
 
-.give-card > p {
+.give-intro {
+  max-width: 470px;
+  margin: 0 auto;
   color: var(--muted);
   font-size: 14px;
 }
 
 .bank-details {
-  margin: 25px 0;
+  margin: 28px 0;
   border: 1px solid #e9e4d8;
   text-align: left;
 }
 
-.bank-details > div {
+.bank-row {
   display: flex;
   justify-content: space-between;
-  gap: 15px;
-  padding: 15px;
+  align-items: center;
+  gap: 18px;
+  padding: 16px;
   border-bottom: 1px solid #e9e4d8;
 }
 
-.bank-details > div:last-child {
+.bank-row:last-child {
   border-bottom: none;
 }
 
-.bank-details span {
+.bank-row span {
   color: var(--muted);
   font-size: 13px;
 }
 
-.bank-details strong {
+.bank-row strong {
   color: var(--green);
   font-size: 13px;
   text-align: right;
@@ -71,29 +606,272 @@
 
 .give-card .give-note {
   margin: 20px 0;
-  padding: 13px;
+  padding: 14px;
   background: #f8f5ed;
+  color: #656b63;
   font-size: 12px;
 }
 
-.scripture-reference {
+.give-scripture {
+  margin: 30px 0 0;
   color: #69736c;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 16px;
+  font-family: var(--serif);
+  font-size: 17px;
   font-style: italic;
+  text-align: center;
+}
+
+/* Contact */
+.contact-section {
+  background: var(--white);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.contact-card {
+  padding: 30px 24px;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.contact-icon {
+  color: var(--gold);
+  font-size: 30px;
+}
+
+/* Footer */
+.site-footer {
+  padding: 42px 0;
+  background: var(--green-dark);
+  color: var(--white);
+  text-align: center;
+}
+
+.footer-brand {
+  color: var(--gold-light);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.footer-inner > p {
+  margin: 12px 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+}
+
+.footer-inner .copyright {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 11px;
+}
+
+/* Keyboard accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+/* Tablet and mobile */
+@media (max-width: 950px) {
+  #navigation {
+    gap: 13px;
+  }
+
+  #navigation a {
+    font-size: 11px;
+  }
+
+  .brand-text strong {
+    font-size: 11px;
+  }
+
+  .brand-text small {
+    font-size: 8px;
+  }
+
+  .events-layout {
+    gap: 35px;
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    padding: 68px 0;
+  }
+
+  .header-inner {
+    min-height: 74px;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .brand-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  #navigation {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 0 12px;
+    border-top: 1px solid var(--border);
+  }
+
+  #navigation.open {
+    display: flex;
+  }
+
+  #navigation a {
+    padding: 12px 4px;
+    border-bottom: 1px solid #f0ede6;
+    font-size: 13px;
+  }
+
+  #navigation a:last-child {
+    border-bottom: none;
+  }
+
+  .hero {
+    min-height: 550px;
+  }
+
+  .hero-content {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .three-cards,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card,
+  .ministry-card {
+    min-height: auto;
+  }
+
+  .events-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .event-placeholder {
+    padding: 32px 24px;
+  }
+
+  .give-card {
+    padding: 30px 22px;
+  }
 }
 
 @media (max-width: 480px) {
-  .give-card {
-    padding: 24px 18px;
+  .container {
+    width: calc(100% - 32px);
   }
 
-  .bank-details > div {
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-text strong {
+    font-size: 10px;
+    letter-spacing: 0.8px;
+  }
+
+  .brand-text small {
+    font-size: 7px;
+    letter-spacing: 1.2px;
+  }
+
+  .hero {
+    min-height: 520px;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 10vw, 48px);
+    letter-spacing: -0.8px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-actions {
+    align-items: stretch;
     flex-direction: column;
-    gap: 4px;
   }
 
-  .bank-details strong {
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .hero-verse {
+    font-size: 15px;
+  }
+
+  .section-heading {
+    margin-bottom: 34px;
+  }
+
+  .info-card,
+  .ministry-card {
+    padding: 25px;
+  }
+
+  .bank-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .bank-row strong {
     text-align: left;
+    overflow-wrap: anywhere;
+  }
+
+  .give-card {
+    padding: 25px 17px;
+  }
+
+  .give-card h3 {
+    font-size: 25px;
+  }
+
+  .scripture-band blockquote {
+    font-size: 28px;
+  }
+
+  .prayer-section {
+    padding: 65px 0;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
