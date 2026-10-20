@@ -880,192 +880,168 @@ button:focus-visible {
    PREMIUM BISHOP & FOUNDER SECTION
    Forest Green • Royal Gold • Ivory
 ========================================= */
-.bishop-section {
+
+/* =========================================
+   ACCESSIBILITY: REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* =========================================
+   BISHOP AND FOUNDER
+   Forest Green and Royal Gold
+========================================= */
+
+#bishop.bishop-section {
+  display: block;
   position: relative;
   isolation: isolate;
+  width: 100%;
+  min-height: 600px;
+  padding: 90px 24px;
   overflow: hidden;
-  padding: 105px 24px;
   background:
     radial-gradient(
-      circle at 8% 15%,
-      rgba(197, 161, 90, 0.12),
-      transparent 32%
+      circle at 10% 15%,
+      rgba(197, 161, 90, 0.15),
+      transparent 35%
     ),
-    linear-gradient(135deg, #071f17 0%, #103b2c 55%, #09271d 100%);
-  color: #fff;
-}
-.bishop-section::before {
-  position: absolute;
-  z-index: -1;
-  top: -180px;
-  right: -140px;
-  width: 430px;
-  height: 430px;
-  border: 1px solid rgba(227, 201, 135, 0.18);
-  border-radius: 50%;
-  content: "";
+    linear-gradient(135deg, #071f17, #103b2c 55%, #09271d);
+  color: #ffffff;
 }
 
-.bishop-section::after {
-  position: absolute;
-  z-index: -1;
-  bottom: -220px;
-  left: -160px;
-  width: 440px;
-  height: 440px;
-  border: 1px solid rgba(227, 201, 135, 0.12);
-  border-radius: 50%;
-  content: "";
-}
-
-.bishop-container {
-  width: min(1120px, 100%);
-  margin: 0 auto;
+#bishop .bishop-container {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: clamp(38px, 6vw, 78px);
   align-items: center;
+  gap: 55px;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
-/* Portrait frame */
-
-.bishop-photo {
+#bishop .bishop-photo {
+  display: block;
   position: relative;
   width: 100%;
   max-width: 440px;
-  min-height: 530px;
+  height: 530px;
   margin: 0 auto;
-  padding: 11px;
+  padding: 10px;
   overflow: hidden;
-  background: linear-gradient(
-    145deg,
-    #f0d99c,
-    #a77c31 45%,
-    #e9cf89
-  );
-  border-radius: 190px 190px 8px 8px;
-  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.28);
+  background: linear-gradient(145deg, #f0d99c, #a77c31, #e9cf89);
+  border: 1px solid #e3c987;
+  border-radius: 180px 180px 8px 8px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
-.bishop-photo::before {
-  position: absolute;
-  inset: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 185px 185px 5px 5px;
-  content: "";
-  pointer-events: none;
-}
-
-.bishop-photo img {
+#bishop .bishop-photo-placeholder {
+  display: flex;
   position: relative;
   width: 100%;
-  height: 508px;
-  display: block;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 180px 180px 4px 4px;
-}
-
-/* Temporary portrait placeholder */
-
-.bishop-photo-placeholder {
-  width: 100%;
-  min-height: 508px;
-  display: flex;
+  height: 100%;
+  min-height: 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px;
+  gap: 12px;
+  padding: 25px;
   background:
-    radial-gradient(
-      circle at 50% 30%,
-      rgba(227, 201, 135, 0.16),
-      transparent 50%
-    ),
+    radial-gradient(circle at 50% 30%, rgba(227, 201, 135, 0.16), transparent 50%),
     linear-gradient(160deg, #174b37, #09291e);
   color: #f0d99c;
   text-align: center;
-  border-radius: 180px 180px 4px 4px;
+  border-radius: 170px 170px 4px 4px;
 }
 
-.bishop-photo-placeholder span {
+#bishop .bishop-photo-placeholder span {
+  display: block;
+  color: #f0d99c;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 29px;
+  font-size: clamp(25px, 3vw, 34px);
+  font-weight: 400;
   line-height: 1.3;
 }
 
-.bishop-photo-placeholder p {
-  margin-top: 12px;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 12px;
-  letter-spacing: 1px;
+#bishop .bishop-photo-placeholder p {
+  max-width: 220px;
+  margin: 0;
+  padding-top: 14px;
+  border-top: 1px solid rgba(227, 201, 135, 0.55);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 11px;
+  line-height: 1.8;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
-/* Bishop's introduction */
-
-.bishop-content {
+#bishop .bishop-content {
   max-width: 610px;
-  color: #fff;
+  color: #ffffff;
 }
 
-.bishop-label {
+#bishop .bishop-label {
   display: inline-block;
-  margin: 0 0 18px;
+  margin: 0 0 20px;
   color: #e3c987;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
   line-height: 1.9;
   text-transform: uppercase;
 }
 
-.bishop-content h2 {
-  margin: 0 0 18px;
+#bishop .bishop-content h2 {
+  margin: 0 0 22px;
   color: #fffaf0;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(34px, 4.2vw, 52px);
   font-weight: 400;
   line-height: 1.15;
-  letter-spacing: -0.7px;
 }
 
-.bishop-content h3 {
-  margin: 0 0 28px;
-  padding-left: 17px;
-  border-left: 3px solid #c5a15a;
-  color: #e3c987;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  line-height: 1.8;
-  text-transform: uppercase;
-}
-
-.bishop-content p:not(.bishop-label) {
-  margin: 0 0 18px;
-  color: rgba(255, 255, 255, 0.79);
-  font-size: 15px;
-  line-height: 1.95;
-}
-
-/* Gold divider */
-
-.bishop-content h2::after {
-  content: "";
+#bishop .bishop-content h2::after {
   display: block;
   width: 72px;
   height: 2px;
   margin-top: 22px;
-  background: linear-gradient(
-    90deg,
-    #e3c987,
-    rgba(227, 201, 135, 0.15)
-  );
+  background: linear-gradient(90deg, #e3c987, rgba(227, 201, 135, 0.15));
+  content: "";
 }
 
-/* Call-to-action button */
+#bishop .bishop-content h3 {
+  margin: 0 0 25px;
+  padding: 5px 0 5px 15px;
+  border-left: 3px solid #c5a15a;
+  color: #e3c987;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
 
-.bishop-button {
+#bishop .bishop-content p:not(.bishop-label) {
+  max-width: 560px;
+  margin: 0 0 18px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+#bishop .bishop-button {
   display: inline-flex;
   min-height: 49px;
   align-items: center;
@@ -1081,248 +1057,78 @@ button:focus-visible {
   letter-spacing: 0.5px;
   text-align: center;
   text-decoration: none;
-  transition:
-    background 0.25s ease,
-    color 0.25s ease,
-    transform 0.25s ease;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
-.bishop-button:hover {
+#bishop .bishop-button:hover {
   transform: translateY(-2px);
   background: transparent;
   color: #f0d99c !important;
 }
 
-/* Tablet layout */
+/* Tablet */
 
 @media (max-width: 850px) {
-  .bishop-section {
-    padding: 80px 24px;
+  #bishop.bishop-section {
+    padding: 75px 24px;
   }
 
-  .bishop-container {
-    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-    gap: 32px;
+  #bishop .bishop-container {
+    gap: 30px;
   }
 
-  .bishop-photo {
-    min-height: 420px;
+  #bishop .bishop-photo {
+    height: 440px;
   }
 
-  .bishop-photo img,
-  .bishop-photo-placeholder {
-    height: 398px;
-    min-height: 398px;
-  }
-
-  .bishop-content h2 {
+  #bishop .bishop-content h2 {
     font-size: clamp(30px, 4.5vw, 40px);
   }
-
-  .bishop-label {
-    letter-spacing: 2px;
-  }
 }
 
-/* Mobile layout */
+/* Mobile */
 
 @media (max-width: 640px) {
-  .bishop-section {
-    padding: 65px 20px 72px;
+  #bishop.bishop-section {
+    min-height: 0;
+    padding: 60px 20px 70px;
   }
 
-  .bishop-container {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 38px;
-  }
-
-  .bishop-photo {
-    width: 100%;
-    max-width: 370px;
-    min-height: 400px;
-  }
-
-  .bishop-photo img,
-  .bishop-photo-placeholder {
-    height: 378px;
-    min-height: 378px;
-  }
-
-  .bishop-content {
-    max-width: 100%;
-  }
-
-  .bishop-label {
-    font-size: 10px;
-    letter-spacing: 2px;
-  }
-
-  .bishop-content h2 {
-    font-size: clamp(32px, 8vw, 42px);
-  }
-
-  .bishop-content h3 {
-    margin-bottom: 23px;
-    font-size: 12px;
-  }
-
-  .bishop-content p:not(.bishop-label) {
-    font-size: 14px;
-    line-height: 1.85;
-  }
-
-  .bishop-button {
-    width: 100%;
-  }
-}
-
-/* Reduced-motion accessibility */
-
-@media (prefers-reduced-motion: reduce) {
-  .bishop-button {
-    transition: none;
-  }
-
-  .bishop-button:hover {
-    transform: none;
-     
-/* Final polish: Bishop and Founder section */
-
-.bishop-photo-placeholder {
-  position: relative;
-  gap: 10px;
-  padding: 35px 25px;
-}
-
-.bishop-photo-placeholder span {
-  color: #f0d99c;
-  font-size: clamp(25px, 3vw, 34px);
-  font-weight: 400;
-  letter-spacing: 0.5px;
-}
-
-.bishop-photo-placeholder p {
-  max-width: 220px;
-  margin: 0;
-  padding-top: 14px;
-  border-top: 1px solid rgba(227, 201, 135, 0.55);
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 11px;
-  line-height: 1.8;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-.bishop-content {
-  position: relative;
-}
-
-.bishop-content .bishop-label {
-  margin-bottom: 20px;
-}
-
-.bishop-content h2 {
-  max-width: 560px;
-  margin-bottom: 22px;
-  letter-spacing: -0.8px;
-}
-
-.bishop-content h3 {
-  display: inline-block;
-  margin-bottom: 25px;
-  padding: 5px 0 5px 15px;
-}
-
-.bishop-content p:not(.bishop-label) {
-  max-width: 560px;
-}
-
-.bishop-button {
-  margin-top: 16px;
-  padding: 16px 26px;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
-}
-
-.bishop-button:focus-visible {
-  outline: 2px solid #f0d99c;
-  outline-offset: 4px;
-}
-
-@media (max-width: 640px) {
-  .bishop-photo-placeholder span {
-    font-size: 27px;
-  }
-
-  .bishop-content h2 {
-    font-size: 34px;
-  }
-
-  .bishop-content h3 {
-    line-height: 1.7;
-     
-/* FIX: Force the Bishop portrait box to display */
-#bishop .bishop-container {
-  display: grid !important;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  align-items: center;
-  gap: 50px;
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
-#bishop .bishop-photo {
-  display: block !important;
-  position: relative;
-  width: 100%;
-  min-height: 530px !important;
-  padding: 10px;
-  overflow: hidden;
-  background: #c5a15a;
-  border: 2px solid #e3c987;
-  border-radius: 180px 180px 8px 8px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-}
-
-#bishop .bishop-photo-placeholder {
-  display: flex !important;
-  width: 100%;
-  min-height: 506px !important;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
-  background: linear-gradient(160deg, #174b37, #09291e);
-  color: #f0d99c;
-  text-align: center;
-  border-radius: 170px 170px 4px 4px;
-}
-
-#bishop .bishop-photo-placeholder span {
-  display: block;
-  color: #f0d99c;
-  font-family: Georgia, serif;
-  font-size: 30px;
-}
-
-#bishop .bishop-photo-placeholder p {
-  color: #ffffff;
-  font-size: 12px;
-  line-height: 1.8;
-}
-
-@media (max-width: 640px) {
   #bishop .bishop-container {
     grid-template-columns: minmax(0, 1fr);
     gap: 35px;
   }
 
   #bishop .bishop-photo {
+    width: 100%;
     max-width: 370px;
-    min-height: 400px !important;
-    margin: 0 auto;
+    height: 400px;
   }
 
-  #bishop .bishop-photo-placeholder {
-    min-height: 376px !important;
+  #bishop .bishop-content {
+    max-width: 100%;
+  }
+
+  #bishop .bishop-content h2 {
+    font-size: clamp(32px, 8vw, 42px);
+  }
+
+  #bishop .bishop-content p:not(.bishop-label) {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  #bishop .bishop-button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #bishop .bishop-button {
+    transition: none;
+  }
+
+  #bishop .bishop-button:hover {
+    transform: none;
   }
 }
