@@ -56,7 +56,7 @@
 <body>
 <header>
   <div>
-    <strong>Abiding Presence International Ministry</strong>
+    <strong>His Abiding Presence International Gospel Center</strong>
     <div class="muted" style="color:#eee">Media Administration</div>
   </div>
   <button id="logoutBtn" class="secondary hidden">Log out</button>
@@ -159,7 +159,7 @@
   }
 
   function mediaUrl(path) {
-    return supabaseClient.storage.from('ministry-media').getPublicUrl(path).data.publicUrl;
+    return supabaseClient.storage.from('Ministry-media').getPublicUrl(path).data.publicUrl;
   }
 
   function addPreview(card, item) {
@@ -233,7 +233,7 @@
         if (!confirm('Delete "' + item.title + '" permanently?')) return;
         remove.disabled = true;
         const { error: fileError } = await supabaseClient.storage
-          .from('ministry-media').remove([item.file_path]);
+          .from('Ministry-media').remove([item.file_path]);
         if (fileError) {
           alert('File deletion failed: ' + fileError.message);
           remove.disabled = false;
@@ -331,7 +331,7 @@
         const path = Date.now() + '-' + crypto.randomUUID() + '-' + cleanName;
 
         const { error: uploadError } = await supabaseClient.storage
-          .from('ministry-media')
+          .from('Ministry-media')
           .upload(path, file, { upsert: false, contentType: file.type });
         if (uploadError) throw uploadError;
 
@@ -347,7 +347,7 @@
           });
 
         if (recordError) {
-          await supabaseClient.storage.from('ministry-media').remove([path]);
+          await supabaseClient.storage.from('Ministry-media').remove([path]);
           throw recordError;
         }
 
