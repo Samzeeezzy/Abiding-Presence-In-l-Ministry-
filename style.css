@@ -873,5 +873,105 @@ button:focus-visible {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+     
+/* Bishop and Founder Section */
+.bishop-section {
+  padding: 80px 20px;
+  background: #f8f5ee;
+}
+
+.bishop-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 50px;
+  align-items: center;
+}
+
+.bishop-photo {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e9e0cf;
+  border: 5px solid #c7a45d;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.bishop-photo-placeholder {
+  text-align: center;
+  padding: 30px;
+  color: #554322;
+}
+
+.bishop-photo-placeholder span {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.bishop-photo-placeholder p {
+  font-size: 15px;
+}
+
+.bishop-content {
+  color: #29251f;
+}
+
+.bishop-label {
+  color: #96732e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.bishop-content h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.2;
+  margin: 15px 0;
+}
+
+.bishop-content h3 {
+  color: #96732e;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.bishop-content p {
+  line-height: 1.8;
+}
+
+.bishop-button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 22px;
+  background: #8b6a2c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.bishop-button:hover {
+  background: #654a1c;
+}
+
+@media (max-width: 768px) {
+  .bishop-section {
+    padding: 50px 18px;
+  }
+
+  .bishop-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .bishop-photo {
+    min-height: 320px;
+  }
+}
+
   }
 }
