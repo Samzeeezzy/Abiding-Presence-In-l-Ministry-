@@ -861,21 +861,6 @@ button:focus-visible {
   }
 }
 
-/* Respect reduced-motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-     
-
-
 /* =========================================
    PREMIUM BISHOP & FOUNDER SECTION
    Forest Green • Royal Gold • Ivory
