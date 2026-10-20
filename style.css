@@ -880,7 +880,6 @@ button:focus-visible {
    PREMIUM BISHOP & FOUNDER SECTION
    Forest Green • Royal Gold • Ivory
 ========================================= */
-
 .bishop-section {
   position: relative;
   isolation: isolate;
@@ -895,7 +894,6 @@ button:focus-visible {
     linear-gradient(135deg, #071f17 0%, #103b2c 55%, #09271d 100%);
   color: #fff;
 }
-
 .bishop-section::before {
   position: absolute;
   z-index: -1;
