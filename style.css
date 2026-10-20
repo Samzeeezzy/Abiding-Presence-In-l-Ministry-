@@ -1115,5 +1115,12 @@ button:focus-visible {
 
   #bishop .bishop-button:hover {
     transform: none;
-  }
+ #bishop .bishop-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 170px 170px 4px 4px;
 }
+  }
